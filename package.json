@@ -18,10 +18,10 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "mobx": "^5.14.2",
-    "mobx-persist": "^0.4.1",
-    "mobx-react": "^6.1.4",
     "qs": "^6.9.0",
+    "mobx": "^4.1.1",
+    "mobx-persist": "^0.4.1",
+    "mobx-react": "^5.0.0",
     "react": "16.9.0",
     "react-native": "0.61.2",
     "react-native-gesture-handler": "^1.4.1",

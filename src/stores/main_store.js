@@ -10,23 +10,19 @@ class MainStore {
 
   @observable isLoading: boolean = false;
 
-  // $FlowFixMe
-  @action setHydrated(isHydrated) {
+  @action setHydrated(isHydrated: boolean) {
     this.isHydrated = isHydrated;
   }
 
-  // $FlowFixMe
-  @action setLoader(isLoading) {
+  @action setLoader(isLoading: boolean) {
     this.isLoading = isLoading;
   }
 
 }
 
-const hydrate = create({
-  storage: AsyncStorage
-});
-
 const mainStore = new MainStore();
+
+const hydrate = create({ storage: AsyncStorage });
 
 export default mainStore;
 
