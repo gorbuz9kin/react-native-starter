@@ -1,6 +1,7 @@
 // @flow
 
 import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
 
 /* CUSTOM MODULES */
 import Home from '/src/containers/Home';
@@ -16,4 +17,6 @@ const AppNavigator = createStackNavigator(
   }
 );
 
-export default AppNavigator;
+const AppContainer = createAppContainer(AppNavigator);
+
+export default AppContainer;

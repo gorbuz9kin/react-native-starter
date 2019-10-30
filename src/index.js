@@ -5,11 +5,13 @@ import React, { Component } from 'react';
 
 /* MODULES */
 import SplashScreen from 'react-native-splash-screen';
-import { Provider } from 'mobx-react';
+import { Provider } from 'mobx-react/native';
 
 /* CUSTOM MODULES */
-import AppNavigation from './navigation';
 import stores from './stores';
+import AppContainer from './navigation';
+import NavigationService from './navigation/actions';
+// import Home from '/src/containers/Home';
 
 type _t_props = {};
 
@@ -22,7 +24,11 @@ export default class App extends Component<_t_props> {
   render() {
     return (
       <Provider {...stores}>
-        <AppNavigation />
+        <AppContainer
+          navRef={(navigatorRef) => {
+            NavigationService.setTopLevelNavigator(navigatorRef);
+          }}
+        />
       </Provider>
     );
   }
