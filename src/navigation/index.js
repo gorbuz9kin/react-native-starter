@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 /* MODULES */
 import { View } from 'react-native';
-import { inject, observer } from "mobx-react/custom";
+import { inject, observer } from "mobx-react";
 
 /* CUSTOM MODULES */
 import AppNavigator from './navigator';
@@ -24,8 +24,8 @@ type _t_props = {
 
 type _t_state = {};
 
-@inject(({ mainStore }) => ({
-  isHydrated: mainStore.isHydrated,
+@inject(({ appStore }) => ({
+  isHydrated: appStore.isHydrated,
 }))
 @observer
 class AppNavigation extends Component<_t_props, _t_state> {

@@ -11,7 +11,6 @@ import { Provider } from 'mobx-react/native';
 import stores from './stores';
 import AppContainer from './navigation';
 import NavigationService from './navigation/actions';
-// import Home from '/src/containers/Home';
 
 type _t_props = {};
 

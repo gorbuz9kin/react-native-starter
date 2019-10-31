@@ -1,7 +1,7 @@
 // @flow
 
-import mainStore from './main_store';
+import appStore from './app_store';
 
 export default {
-  mainStore,
+  appStore,
 };
