@@ -24,5 +24,8 @@ export default ({ navigation }: _t_props): Node => (
     <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
       <Text>Navigate to Profile Screen</Text>
     </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('Map')}>
+      <Text>Navigate to Map Screen</Text>
+    </TouchableOpacity>
   </View>
 );
